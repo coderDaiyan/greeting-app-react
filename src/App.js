@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
+  const hour = new Date().getHours();
+  let hourText = "";
+  if (hour >= 0) {
+    hourText = "Good Morning";
+    if (hour >= 12) {
+      hourText = "Good AfterNoon";
+      if (hour >= 19) {
+        hourText = "Good Night";
+      }
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="parent">
+        <div className="greetings">
+          <h1>
+            <span className="hello_text"> Hello Sir,</span>{" "}
+            <span className="greet_text">{hourText}</span>
+          </h1>
+        </div>
+      </div>
+    </>
   );
 }
 
