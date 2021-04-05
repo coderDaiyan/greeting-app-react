@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 .parent {
+  font-family: "Josefin Sans", sans-serif;
   width: 100vw;
   height: 100vh;
   background-color: #55efc4;
